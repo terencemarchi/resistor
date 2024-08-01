@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Résistance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculateur de Valeur de Résistance</h1>
+
+    <div class="resistor-calculator">
+        <label for="band-count">Nombre de bandes :</label>
+        <select id="band-count" onchange="updateBands()">
+            <option value="4">4 Bandes</option>
+            <option value="5">5 Bandes</option>
+            <option value="6">6 Bandes</option>
+        </select>
+
+        <div id="bands">
+            <label for="band1">1er anneau :</label>
+            <select id="band1">
+                <option value="0">Noir</option>
+                <option value="1">Marron</option>
+                <option value="2">Rouge</option>
+                <option value="3">Orange</option>
+                <option value="4">Jaune</option>
+                <option value="5">Vert</option>
+                <option value="6">Bleu</option>
+                <option value="7">Violet</option>
+                <option value="8">Gris</option>
+                <option value="9">Blanc</option>
+            </select>
+
+            <label for="band2">2ème anneau :</label>
+            <select id="band2">
+                <option value="0">Noir</option>
+                <option value="1">Marron</option>
+                <option value="2">Rouge</option>
+                <option value="3">Orange</option>
+                <option value="4">Jaune</option>
+                <option value="5">Vert</option>
+                <option value="6">Bleu</option>
+                <option value="7">Violet</option>
+                <option value="8">Gris</option>
+                <option value="9">Blanc</option>
+            </select>
+
+            <label for="band3" id="band3-label">3ème anneau :</label>
+            <select id="band3">
+                <option value="0">Noir</option>
+                <option value="1">Marron</option>
+                <option value="2">Rouge</option>
+                <option value="3">Orange</option>
+                <option value="4">Jaune</option>
+                <option value="5">Vert</option>
+                <option value="6">Bleu</option>
+                <option value="7">Violet</option>
+                <option value="8">Gris</option>
+                <option value="9">Blanc</option>
+            </select>
+
+            <label for="multiplier">Multiplicateur :</label>
+            <select id="multiplier">
+                <option value="1">Noir</option>
+                <option value="10">Marron</option>
+                <option value="100">Rouge</option>
+                <option value="1000">Orange</option>
+                <option value="10000">Jaune</option>
+                <option value="100000">Vert</option>
+                <option value="1000000">Bleu</option>
+                <option value="10000000">Violet</option>
+                <option value="0.1">Or</option>
+                <option value="0.01">Argent</option>
+            </select>
+
+            <label for="tolerance">Tolérance :</label>
+            <select id="tolerance">
+                <option value="1">Marron</option>
+                <option value="2">Rouge</option>
+                <option value="0.5">Vert</option>
+                <option value="0.25">Bleu</option>
+                <option value="0.1">Violet</option>
+                <option value="5">Or</option>
+                <option value="10">Argent</option>
+            </select>
+
+            <label for="temp-coefficient" id="temp-coefficient-label">Coefficient de Température :</label>
+            <select id="temp-coefficient">
+                <option value="100 ppm/K">Marron</option>
+                <option value="15 ppm/K">Orange</option>
+                <option value="25 ppm/K">Jaune</option>
+            </select>
+        </div>
+
+        <button onclick="calculateResistance()">Calculer la Résistance</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
